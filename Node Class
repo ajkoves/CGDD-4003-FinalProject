@@ -1,0 +1,77 @@
+using UnityEngine;
+
+public class Node : MonoBehaviour
+{
+    // Private
+    static int tokenCount;      // Holds the numnber of tokens across all nodes.
+    static int columnCount;     // Holds the number of columns across all nodes.
+
+    int wallCount;                                                  // Holds the numnber of walls for current node.
+    bool hasNorthWall, hasSouthWall, hasEastWall, hasWestWall;      // Holds if a current node has a specific wall.
+    bool isExit, isGreenSpawn, isRedSpawn, isTokenNode;             // Holds if a current node is an exit, spawn, or token node. These should be exclusive.
+    bool hasOrb;                                                    // Holds if a current node has the orb.
+    string token;                                                   // Holds the string value of the token contained at the current node.
+
+    Transform waypoint;     // Holds the transform of the waypoint of the current node. Used for pathfinding and movement.
+
+    public void AddWall()
+    {
+        // Check wallCount
+        // Instantiate bool array of false hasWall.
+        // Generate random number 0 to (array.Length-1)
+        // Set array[num] to true.
+        // Increment wall count.
+        // Instantiate wall at appropriate transform.
+    }
+
+    public void AddWall(string wallName)
+    {
+        // Switch based on wallName.
+        // Check if appropriate hasWall is false, then set to true, otherwise break.
+        // Increment wallCount.
+        // Instantiate wall at appropriate transform.
+    }
+
+    public void AddColumn()
+    {
+        // Check if columnCount < n/10.
+        // Check wallCount.
+        // If less < 4, instantiate bool array of false hasWall.
+        // For each element, set bool to true and instantiate wall at appropriate transform.
+        // Increment columnCount.
+    }
+
+    public void AddToken()
+    {
+        // Check wallCount < 4.
+        // Check isTokenNode, isExit, isGreenSpawn, && isRedSpawn == false
+        // Get Token string from Token class.
+        // Instantiate chest at appropriate transform.
+        // Set isTokenNode to true.
+    }
+
+    public void AddExit()
+    {
+        // Check wallCount < 4.
+        // Check isTokenNode, isExit, isGreenSpawn, && isRedSpawn == false
+        // Set isExit to true.
+        // Instantiate something?
+    }
+
+    public void AddGreenSpawn ()
+    {
+        // Check if this node is <6,6> in node array. <==== This will probably go into the Map Generation script.
+        // Set isGreeenSpawn to true.
+    }
+
+    public void AddRedSpawn ()
+    {
+        // Check if this node is <1,6>, <3,5>, <4,9>, or <9,8> in the node array. <==== This will probably go into the Map Generation script.
+        // Set isRedSpawn to true.
+    }
+
+    //=================================================================
+    // There must be some kind of method or accessor to change hasOrb.
+    // Probably the Token class with some kind of gate.
+    //=================================================================
+}
