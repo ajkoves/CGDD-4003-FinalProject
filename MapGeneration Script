@@ -1,0 +1,37 @@
+using UnityEngine;
+
+public class MapGeneration : MonoBehaviour
+{
+    //===========================================================================
+    //
+    //  This is a rough overview of the algorithm for the Map/Wall Generation.
+    //  It will make use of the Node class to do so. The data structure may
+    //  end up being a graph.
+    //
+    //===========================================================================
+    //
+    //  Conditions for the algorithm:
+    //
+    //  Precondition: 2D array of some sort is instantiated and initialized.
+    //
+    //
+    //  Postconditions: For an array of size n, n-n/10 (sqrt(n)?) nodes will be
+    //  accessible from any other node. All of the walls for each node, columns,
+    //  and tokens will be assigned randomly. All exit points and starting points
+    //  will be assigned based on specific array points.
+    //
+    //===========================================================================
+    //
+    //  These are the steps taken in the generation:
+    //
+    //  1) Initialize exit points.
+    //  2) Initialize starting points.
+    //  3) Initialize token points.
+    //  4) Initialize columns.
+    //      - No more than 2 columns per row/column?
+    //  5) Initialize the remaining walls.
+    //      - This will need to other row/column walls to ensure that there is
+    //        not a line of walls blocking off a specific portion of the map.
+    //
+    //===========================================================================
+}
