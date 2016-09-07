@@ -6,7 +6,7 @@ public class Node : MonoBehaviour
     static int tokenCount;      // Holds the numnber of tokens across all nodes.
     static int columnCount;     // Holds the number of columns across all nodes.
 
-    int wallCount;                                                  // Holds the numnber of walls for current node.
+    int wallCount;                                                  // Holds the number of walls for current node.
     bool hasNorthWall, hasSouthWall, hasEastWall, hasWestWall;      // Holds if a current node has a specific wall.
     bool isExit, isGreenSpawn, isRedSpawn, isTokenNode;             // Holds if a current node is an exit, spawn, or token node. These should be exclusive.
     bool hasOrb;                                                    // Holds if a current node has the orb.
