@@ -55,7 +55,7 @@ public class Node : MonoBehaviour
         // Check wallCount < 4.
         // Check isTokenNode, isExit, isGreenSpawn, && isRedSpawn == false
         // Set isExit to true.
-        // Instantiate something?
+        // Instantiate something? (portal?)
     }
 
     public void AddGreenSpawn ()
